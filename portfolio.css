@@ -475,3 +475,6 @@ html,body,body *{cursor:url('assets/mac-pointer.svg') 1 1,auto!important}
   55%, 87% {opacity: 1;transform:scale(1) var(--motion-base,translate(0));}
 }
 }
+
+/* Long Russian case labels wrap cleanly on narrow screens. */
+.case-meta{flex-wrap:wrap}
