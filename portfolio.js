@@ -15,7 +15,7 @@
     reduced=!enabled;root.dataset.motion=enabled?'on':'off';
     if(persist){explicitMotion=true;try{localStorage.setItem('portfolio-motion',root.dataset.motion);}catch{}}
     updateMotionButton();stopTyping();clearPointer();
-    if(reduced)groups.forEach(group=>group.classList.add('is-visible'));
+    if(reduced){headline.textContent=words[wordIndex];letter=words[wordIndex].length;deleting=true;groups.forEach(group=>group.classList.add('is-visible'));}
     else if(heroVisible&&!document.hidden)typeTimer=setTimeout(typingStep,700);
   }
   // Animation is the CSS default. An unavailable observer must not freeze the page.
