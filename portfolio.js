@@ -52,6 +52,29 @@
   }
   serviceTabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectService(tab));tab.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight'||event.key==='ArrowDown')next=(index+1)%serviceTabs.length;else if(event.key==='ArrowLeft'||event.key==='ArrowUp')next=(index-1+serviceTabs.length)%serviceTabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=serviceTabs.length-1;else return;event.preventDefault();selectService(serviceTabs[next],true);});});
   const serviceObserver=new IntersectionObserver(([entry])=>$('.service-console').classList.toggle('services-visible',entry.isIntersecting));serviceObserver.observe($('.service-console'));
+  const telegramTabs=$$('[data-telegram-tab]'),telegramPanels=$$('.telegram-project-panel');
+  function selectTelegramProject(tab,focus=false){
+    if(tab.getAttribute('aria-selected')==='true'){if(focus)tab.focus();return;}
+    telegramTabs.forEach(button=>{const active=button===tab;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
+    telegramPanels.forEach(panel=>{panel.hidden=panel.id!==tab.getAttribute('aria-controls');});
+    const panel=document.getElementById(tab.getAttribute('aria-controls'));
+    if(!reduced)panel.animate([{opacity:0},{opacity:1}],{duration:220,easing:'ease-out'});
+    if(focus)tab.focus();
+  }
+  telegramTabs.forEach((tab,index)=>{
+    tab.addEventListener('click',()=>selectTelegramProject(tab));
+    tab.addEventListener('keydown',event=>{
+      let next;
+      if(event.key==='ArrowRight')next=(index+1)%telegramTabs.length;
+      else if(event.key==='ArrowLeft')next=(index-1+telegramTabs.length)%telegramTabs.length;
+      else if(event.key==='Home')next=0;
+      else if(event.key==='End')next=telegramTabs.length-1;
+      else return;
+      event.preventDefault();selectTelegramProject(telegramTabs[next],true);
+    });
+  });
+  const scraperObserver=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('scraper-visible',entry.isIntersecting)));
+  $$('.scraper-motion').forEach(element=>scraperObserver.observe(element));
   const headline=$('.typing-role'),words=['приложения','сайты','Telegram-боты','AI-автоматизация'];
   let typeTimer=0,wordIndex=0,letter=words[0].length,deleting=true,heroVisible=false;
   function stopTyping(){clearTimeout(typeTimer);typeTimer=0;}
