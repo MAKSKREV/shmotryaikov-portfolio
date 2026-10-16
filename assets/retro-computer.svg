@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 410" role="img" aria-labelledby="title">
+<title id="title">Бежевый CRT-монитор, системный блок и клавиатура</title>
+<defs>
+ <linearGradient id="case" x2=".9" y2="1"><stop stop-color="#fffce8"/><stop offset="1" stop-color="#c7c5ac"/></linearGradient>
+ <linearGradient id="side" x2="1" y2=".2"><stop stop-color="#acae9d"/><stop offset="1" stop-color="#dedfcb"/></linearGradient>
+ <linearGradient id="screen" x2="1" y2="1"><stop stop-color="#072672"/><stop offset=".55" stop-color="#122bba"/><stop offset="1" stop-color="#091040"/></linearGradient>
+ <linearGradient id="cd" x2="1" y2="1"><stop stop-color="#f8f3d3"/><stop offset=".25" stop-color="#baf6f2"/><stop offset=".5" stop-color="#c7c4fd"/><stop offset=".7" stop-color="#ffd8f4"/><stop offset="1" stop-color="#f8f0b3"/></linearGradient>
+ <pattern id="keys" width="21" height="16" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="18" height="12" rx="1" fill="#e7e5d0" stroke="#8e9388" stroke-width="1"/><path d="M3 3h13" stroke="#fffceb"/><path d="M4 5h4" stroke="#7a8075"/></pattern>
+ <pattern id="scan" width="2" height="4" patternUnits="userSpaceOnUse"><path d="M0 3h2" stroke="#000" stroke-opacity=".13"/></pattern>
+</defs>
+<ellipse cx="255" cy="370" rx="207" ry="22" fill="#000080" opacity=".12"/>
+<!-- full-height tower, behind the monitor -->
+<path d="m346 59 80-17 24 29v242l-83 20-25-30z" fill="#888d80" stroke="#535f59" stroke-width="2"/>
+<path d="m346 59 80-17 24 29-83 19z" fill="#f5f4d9" stroke="#949d8e" stroke-width="2"/>
+<path d="m367 90 83-19v242l-83 20z" fill="url(#case)" stroke="#687266" stroke-width="2"/>
+<path d="m342 81 25 9v243l-25-30z" fill="url(#side)"/>
+<path d="m377 105 63-14v31l-63 14z" fill="#b6b9a7" stroke="#747d70"/>
+<path d="m381 109 55-12v12l-55 12z" fill="#e7e7d1"/><path d="m383 126 41-9" stroke="#61695e" stroke-width="3"/>
+<path d="m377 146 63-14v25l-63 14z" fill="#b6b9a7" stroke="#747d70"/>
+<path d="m383 154 37-8" stroke="#4e5850" stroke-width="4"/>
+<path d="m382 186 53-12m-53 7 53-12m-53 7 53-12" stroke="#9ba38e" stroke-width="2"/>
+<ellipse cx="409" cy="231" rx="11" ry="12" fill="#a4af95" stroke="#6a7965"/><ellipse cx="409" cy="230" rx="7" ry="8" fill="#d4d7bf"/>
+<path d="M409 220v8" stroke="#6f7b65" stroke-width="2"/>
+<rect x="393" y="258" width="5" height="5" fill="#64cd26"/><rect x="405" y="255" width="5" height="5" fill="#ecb545"/>
+<path d="m382 285 54-12m-54 18 54-12m-54 18 54-12m-54 18 54-12" stroke="#7d8b74" stroke-width="2"/>
+<path d="m418 293 21-5v20l-21 5z" fill="#1654b1"/><path d="m422 296 14-3m-14 7 14-3m-14 7 8-2" stroke="#fff" stroke-width="1.5"/>
+<!-- monitor shell -->
+<path d="m68 34 217-14 59 48-7 202-53 21-222-15z" fill="url(#side)" stroke="#5b685e" stroke-width="2.5"/>
+<path d="m68 34 217-14 59 48-257 7z" fill="#ffffe8" stroke="#9fa591" stroke-width="2"/>
+<path d="m87 75 257-7-7 202-247 11z" fill="url(#case)" stroke="#737f70" stroke-width="2"/>
+<path d="m104 93 221-6-6 156-209 9z" fill="#aaa993" stroke="#f8f8de" stroke-width="3"/>
+<path d="m114 102 201-6-5 140-190 8z" fill="#48564e" stroke="#717965" stroke-width="2"/>
+<path d="m122 111 185-6-5 121-173 8z" fill="url(#screen)"/>
+<path d="m130 120 164-6" fill="none" stroke="#adccf4" opacity=".25" stroke-width="4"/>
+<!-- pixel floppy mascot on the display -->
+<g fill="#a5bfff" shape-rendering="crispEdges"><path d="M177 131h53v7h7v52h-60z"/><path d="M183 131h34v22h-34z" fill="#e8e6ef"/><path d="M203 135h9v14h-9z" fill="#2643b9"/><path d="M185 163h42v27h-42z" fill="#fffdf0"/><path d="M193 171h5v5h-5zm20 0h5v5h-5zm-15 10h15v4h-15z" fill="#2337a3"/></g>
+<text x="150" y="218" fill="#e1e9ff" font-family="Courier New,monospace" font-size="22" font-weight="bold" letter-spacing="2">HELLO.</text>
+<path d="m129 111 178-6-5 121-173 8z" fill="url(#scan)"/>
+<path d="m279 196 0 28 7-7 5 12 5-3-5-11h11z" fill="#fff" stroke="#091042" stroke-width="2"/>
+<!-- lower controls and neck -->
+<path d="m113 262 43-2" stroke="#808e7a" stroke-width="2"/><path d="m113 267 35-2" stroke="#a4aa93" stroke-width="2"/>
+<rect x="288" y="251" width="17" height="9" rx="2" fill="#c4c6ad" stroke="#79866f"/><rect x="316" y="250" width="4" height="4" fill="#78d63c"/>
+<path d="m191 279-1 27-31 13 110-3-30-13 1-26" fill="url(#side)" stroke="#72816f" stroke-width="2"/>
+<path d="m161 318 107-3 14 10-130 4z" fill="#ecebd2" stroke="#7d8a75" stroke-width="2"/>
+<!-- keyboard -->
+<path d="m83 324 224-9 39 40-263 17-33-24z" fill="#9da994" stroke="#596e5e" stroke-width="2"/>
+<path d="m83 324 224-9 39 32-263 17-33-16z" fill="#efeeda" stroke="#71856e" stroke-width="2"/>
+<g transform="matrix(1,-.055,.65,.55,83,329)"><rect width="218" height="49" fill="url(#keys)"/><rect x="46" y="34" width="112" height="12" rx="1" fill="#dddcc8" stroke="#8e9388"/></g>
+<path d="m346 349 15-2q9 1 12 12l2 11q-10 9-27 1l-2-9z" fill="#e9e8d1" stroke="#72816f" stroke-width="2"/><path d="m359 349 2 12m-13 0 24-1" stroke="#9ca68f"/><path d="M359 348q7-26 24-18" fill="none" stroke="#667660" stroke-width="2"/>
+<!-- a loose disc -->
+<ellipse cx="420" cy="362" rx="37" ry="15" fill="url(#cd)" stroke="#99a4b8"/><ellipse cx="420" cy="362" rx="8" ry="3" fill="#c6d9df" stroke="#8d9bae"/>
+</svg>
