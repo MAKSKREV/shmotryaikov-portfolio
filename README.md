@@ -1,43 +1,50 @@
 # @shmotryAIkov
 
-Сайт-визитка разработчика приложений, сайтов, Telegram-ботов и автоматизаций через ИИ. Интерфейс вдохновлён старым Mac: небольшие окна, ретро-иконки и лёгкие пассивные анимации.
+A developer portfolio for apps, websites, Telegram bots and AI automations. A playful retro Mac interface with small windows, classic icons and lightweight motion.
 
-## Запуск
+[View the portfolio](https://makskrev.github.io/shmotryaikov-portfolio/) · [View the computer workshop website](https://makskrev.github.io/shmotryaikov-portfolio/projects/website.html)
 
-Проект — статический сайт на HTML, CSS и JavaScript. Сборка и установка пакетов не нужны.
+## Run locally
 
-В папке проекта запустите:
+This is a static HTML, CSS and JavaScript website. No build step or package installation is required.
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-Откройте [http://127.0.0.1:4173/](http://127.0.0.1:4173/). Для остановки сервера нажмите `Ctrl+C`.
+Open [http://127.0.0.1:4173/](http://127.0.0.1:4173/). Stop the server with `Ctrl+C`.
 
-## Содержание
+## Selected work
 
-- Telegram-боты — PRUstarsbot с двумя оригинальными скриншотами и парсер сайтов, публиковавший объявления о недвижимости в Telegram-канале. Проекты переключаются вкладками в одном окне; результат парсера показан на оригинальном скриншоте.
-- ML-проект — работа на хакатоне с фотографией из рабочего канала.
-- «Дискета» — пример сайта компьютерной мастерской в стиле Windows 95/98/XP; не клиентский заказ.
+- **Telegram projects:** PRUstarsbot and a website parser that published property listings to a Telegram channel. Original screenshots show the actual results. A third tab presents **Buffer**, an explicitly labelled bot concept for turning voice notes and long messages into tasks; its artwork illustrates a proposed workflow, without a working bot or demo.
+- **Machine learning:** a hackathon prototype for extracting information from technical drawings, shown with an original development photo.
+- **Website:** an example computer workshop website inspired by Windows 95, 98 and XP. It is a website concept, not a completed client commission.
 
-Окна на первом экране можно перемещать, сворачивать и закрывать. Значок Mac в шапке восстанавливает их. Фотографии открываются в галерее. Анимации учитывают настройку уменьшения движения и приостанавливаются, когда вкладка скрыта или блок находится вне экрана.
+The website interface, accessibility labels, image viewer and computer workshop example are in English. Original project screenshots retain the language in which they were captured.
 
-## Файлы
+## Interaction and motion
 
-- `index.html` — основная страница.
-- `shmotryAIkov.html` — та же страница по прежнему адресу.
-- `style.css`, `portfolio.css` — оформление и адаптивная версия.
-- `portfolio.js` — навигация, окна, вкладки и галерея.
-- `assets/` — локальные изображения, иконки и шрифты.
-- `projects/disketa.html` — пример сайта «Дискета».
+The hero windows can be moved, minimized, closed and restored with the Mac icon in the navigation bar. Photos open in a keyboard-accessible viewer. Service and Telegram project tabs support arrow keys, Home and End.
 
-Шрифты и изображения загружаются локально. Серверная часть, ключи API и переменные окружения для запуска не требуются.
+Small passive animations illustrate the projects. They pause outside the viewport, in hidden panels and when the browser tab is hidden. Reduced-motion preferences are respected.
 
-## Контакты и источники
+## Files
+
+- `index.html` — the main page.
+- `shmotryAIkov.html` — an alias for the same page.
+- `style.css` — the original visual foundation.
+- `portfolio.css` — portfolio components and retro Mac details.
+- `portfolio.js` — navigation, windows, tabs and the photo viewer.
+- `assets/` — local images, icons and fonts.
+- `projects/website.html` — the English computer workshop website.
+
+GitHub Pages publishes the root of `main`. No backend, API keys or environment variables are required.
+
+## Contact and references
 
 - [Telegram: @shmotryAIkov](https://t.me/shmotryAIkov)
-- [Рабочий канал](https://t.me/chilovuyparen2)
-- [Фотография ML-проекта](https://t.me/chilovuyparen2/494)
-- [Исходный визуальный референс — heyclicky](https://www.heyclicky.com/)
+- [Build journal](https://t.me/chilovuyparen2)
+- [ML project photo](https://t.me/chilovuyparen2/494)
+- Visual reference: [heyclicky](https://www.heyclicky.com/).
 
-Скриншоты PRUstarsbot и публикации парсера предоставлены владельцем проекта и сохранены без изменения. Анимированная схема парсера иллюстрирует путь данных: сайт → парсер → Telegram-канал. Анимация приостанавливается вне экрана и учитывает настройку уменьшения движения. Для примера «Дискета» используется шрифт Tiny5; его лицензия находится в `projects/Tiny5-OFL.txt`.
+The PRUstarsbot and parser screenshots were supplied by the portfolio owner and preserved unchanged. The computer workshop example uses Tiny5; its licence is included in `projects/Tiny5-OFL.txt`.

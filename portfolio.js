@@ -25,7 +25,7 @@
   }
 
   $('.dev-logo').addEventListener('click',()=>{closeMenu();$$('.portfolio-nav .is-current').forEach(a=>a.classList.remove('is-current'));restoreWindows();window.scrollTo({top:0,behavior:reduced?'instant':'smooth'});});
-  function clock(){const now=new Date();const el=$('.portfolio-clock');el.textContent=now.toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});el.dateTime=now.toISOString();}
+  function clock(){const now=new Date();const el=$('.portfolio-clock');el.textContent=now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});el.dateTime=now.toISOString();}
   clock();setInterval(clock,30000);
   const groups=$$('.reveal-group,.project-feature');
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.target.classList.contains('contact-section')){entry.target.classList.toggle('is-visible',entry.isIntersecting);}else if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{rootMargin:'0px 0px -6% 0px'});
@@ -73,9 +73,9 @@
       event.preventDefault();selectTelegramProject(telegramTabs[next],true);
     });
   });
-  const scraperObserver=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('scraper-visible',entry.isIntersecting)));
-  $$('.scraper-motion').forEach(element=>scraperObserver.observe(element));
-  const headline=$('.typing-role'),words=['приложения','сайты','Telegram-боты','AI-автоматизация'];
+  const projectMotionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('project-motion-visible',entry.isIntersecting)));
+  $$('.scraper-motion,.buffer-motion').forEach(element=>projectMotionObserver.observe(element));
+  const headline=$('.typing-role'),words=['apps','websites','Telegram bots','AI automations'];
   let typeTimer=0,wordIndex=0,letter=words[0].length,deleting=true,heroVisible=false;
   function stopTyping(){clearTimeout(typeTimer);typeTimer=0;}
   function typingStep(){
@@ -127,13 +127,13 @@
     if(dialog)return;
     const current=document.createElement('dialog');dialog=current;current.className='portfolio-dialog';current.setAttribute('aria-label',trigger.dataset.title);
     const head=document.createElement('div');head.className='dialog-head';const label=document.createElement('span');label.textContent=trigger.dataset.title;
-    const close=document.createElement('button');close.textContent='×';close.setAttribute('aria-label','Закрыть фото');head.append(label,close);
+    const close=document.createElement('button');close.textContent='×';close.setAttribute('aria-label','Close photo');head.append(label,close);
     const image=document.createElement('img');image.src=trigger.dataset.photo;image.alt=trigger.dataset.title;image.decoding='async';current.append(head,image);
     let source;
     if(trigger.dataset.source){source=document.createElement('a');source.className='dialog-source';source.target='_blank';source.rel='noopener';current.append(source);}
     const gallery=trigger.closest('.telegram-photo-pair');const photos=gallery?$$('[data-photo]',gallery):[trigger];let index=photos.indexOf(trigger),counter;
-    function showPhoto(){const button=photos[index];image.src=button.dataset.photo;image.alt=button.dataset.title;label.textContent=button.dataset.title;current.setAttribute('aria-label',button.dataset.title);if(source){source.href=button.dataset.source;source.textContent=button.dataset.sourceLabel||'запись в рабочем дневнике ↗';}if(counter)counter.textContent=(index+1)+' / '+photos.length;}
-    if(photos.length>1){const controls=document.createElement('div');controls.className='gallery-controls';const previous=document.createElement('button');previous.textContent='←';previous.setAttribute('aria-label','Предыдущее фото');const next=document.createElement('button');next.textContent='→';next.setAttribute('aria-label','Следующее фото');counter=document.createElement('span');previous.addEventListener('click',()=>{index=(index-1+photos.length)%photos.length;showPhoto();});next.addEventListener('click',()=>{index=(index+1)%photos.length;showPhoto();});controls.append(previous,counter,next);current.append(controls);current.classList.add('gallery-dialog');current.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();index=(index+(event.key==='ArrowRight'?1:-1)+photos.length)%photos.length;showPhoto();}});}
+    function showPhoto(){const button=photos[index];image.src=button.dataset.photo;image.alt=button.dataset.title;label.textContent=button.dataset.title;current.setAttribute('aria-label',button.dataset.title);if(source){source.href=button.dataset.source;source.textContent=button.dataset.sourceLabel||'View the build journal ↗';}if(counter)counter.textContent=(index+1)+' / '+photos.length;}
+    if(photos.length>1){const controls=document.createElement('div');controls.className='gallery-controls';const previous=document.createElement('button');previous.textContent='←';previous.setAttribute('aria-label','Previous photo');const next=document.createElement('button');next.textContent='→';next.setAttribute('aria-label','Next photo');counter=document.createElement('span');previous.addEventListener('click',()=>{index=(index-1+photos.length)%photos.length;showPhoto();});next.addEventListener('click',()=>{index=(index+1)%photos.length;showPhoto();});controls.append(previous,counter,next);current.append(controls);current.classList.add('gallery-dialog');current.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();index=(index+(event.key==='ArrowRight'?1:-1)+photos.length)%photos.length;showPhoto();}});}
     showPhoto();document.body.append(current);const overflow=document.body.style.overflow;document.body.style.overflow='hidden';let cleaned=false;
     function cleanup(){if(cleaned)return;cleaned=true;document.body.style.overflow=overflow;current.remove();if(dialog===current)dialog=null;trigger.focus({preventScroll:true});}
     let closing=false;

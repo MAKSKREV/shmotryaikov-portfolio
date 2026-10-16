@@ -11,3 +11,7 @@
 @media(min-width:761px) and (max-width:1120px){.hero-copy h1{font-size:60px}.hero-body{height:348px}.hero-copy{padding-top:25px}.hero-art>img{width:119%;left:-15%}}
 @media(max-width:760px){.hero-copy h1{font-size:clamp(38px,12.2vw,56px);letter-spacing:-1px}.hero-art{height:280px}}
 @media(min-width:761px) and (max-width:950px){.browser-window,.content-area,.site-footer{width:calc(100% - 120px)}.shortcuts a{width:45px;font-size:8px}.shortcuts svg{width:31px;height:31px}.hero-copy h1{font-size:54px}.hero-ticker{font-size:8px}.hero-ticker b{padding-inline:4px}.save-window{width:145px;left:12px}.save-window .save-body svg{width:22px;height:22px}}
+/* Keep the English headline within the original retro composition. */
+@media(min-width:951px){.hero-copy h1{font-size:62px;letter-spacing:-1.5px}}
+@media(min-width:761px) and (max-width:950px){.hero-copy h1{font-size:48px}}
+@media(max-width:760px){.hero-copy h1{font-size:clamp(32px,11vw,50px);letter-spacing:-1px}}
