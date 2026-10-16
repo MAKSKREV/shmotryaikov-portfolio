@@ -26,7 +26,7 @@ The website interface, accessibility labels, image viewer and computer workshop 
 
 The hero windows can be moved, minimized, closed and restored with the Mac icon in the navigation bar. Photos open in a keyboard-accessible viewer. Service and Telegram project tabs support arrow keys, Home and End.
 
-Small passive animations illustrate the projects. They pause outside the viewport, in hidden panels and when the browser tab is hidden. Reduced-motion preferences are respected.
+Small passive animations illustrate the projects. They pause outside the viewport, in hidden panels and when the browser tab is hidden. Reduced-motion preferences are respected by default. The small play/pause button in the menu bar can explicitly enable or pause animations; the choice is remembered on that browser. Motion resumes after returning to the page, and older browsers have transform-based fallbacks. If visibility observers are unavailable, animations and content remain available.
 
 ## Files
 
