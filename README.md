@@ -1,4 +1,4 @@
-# @shmotryAIkov — разработчик
+# @shmotryakov — разработчик
 
 Русская визитка разработчика приложений, сайтов, Telegram-ботов и ИИ-автоматизаций. Ретро-интерфейс Mac, небольшие окна и пассивные анимации без кнопки включения.
 
@@ -25,4 +25,4 @@ GitHub Pages публикует корень ветки main. index.html и shmo
 
 ## Связь
 
-[Telegram: @shmotryAIkov](https://t.me/shmotryAIkov) · [Дневник разработки](https://t.me/chilovuyparen2)
+[Telegram: @shmotryakov](https://t.me/shmotryakov) · [Дневник разработки](https://t.me/chilovuyparen2)
